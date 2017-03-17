@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.matteo.challengento_mkj">
-
+    >
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Jouer" />
+        <activity android:name=".Informations" />
+        <activity android:name=".Multijoueur.CreationScenario" />
+        <activity android:name=".Multijoueur.EnregistrementScenario" />
+        <activity android:name=".Multijoueur.LancementScenario" />
+        <activity android:name=".Multijoueur.ScenarioEnCours" />
+        <activity android:name=".Multijoueur.Score"></activity>
     </application>
 
 </manifest>
