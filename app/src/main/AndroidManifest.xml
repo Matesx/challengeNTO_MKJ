@@ -9,20 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:screenOrientation="locked">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Jouer" />
-        <activity android:name=".Informations" />
-        <activity android:name=".Multijoueur.CreationScenario" />
-        <activity android:name=".Multijoueur.EnregistrementScenario" />
-        <activity android:name=".Multijoueur.LancementScenario" />
-        <activity android:name=".Multijoueur.ScenarioEnCours" />
-        <activity android:name=".Multijoueur.Score"></activity>
+        <activity android:name=".Jouer" android:screenOrientation="locked" />
+        <activity android:name=".Informations" android:screenOrientation="locked"/>
+        <activity android:name=".Multijoueur.CreationScenario" android:screenOrientation="locked"/>
+        <activity android:name=".Multijoueur.EnregistrementScenario" android:screenOrientation="locked"/>
+        <activity android:name=".Multijoueur.LancementScenario" android:screenOrientation="locked"/>
+        <activity android:name=".Multijoueur.ScenarioEnCours" android:screenOrientation="locked"/>
+        <activity android:name=".Multijoueur.Score" android:screenOrientation="locked"></activity>
     </application>
 
 </manifest>
