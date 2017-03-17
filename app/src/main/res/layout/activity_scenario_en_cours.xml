@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.matteo.challengento_mkj.Multijoueur.ScenarioEnCours">
 
+    <TextView
+        android:id="@+id/textViewScenarioEnCours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="134dp" />
 </android.support.constraint.ConstraintLayout>
