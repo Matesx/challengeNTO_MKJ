@@ -15,7 +15,8 @@ public class Informations extends AppCompatActivity {
 
         final TextView TextViewInfo = (TextView) findViewById(R.id.textViewInfo);
 
-        TextViewInfo.setText("Bienvenue sur l'application Chore App ! \n L'application qui va vous faire bouger ! :)");
+        TextViewInfo.setText("Bienvenue sur l'application Chore App ! \n L'application qui va vous faire bouger ! :) \nVous commencez avec un score de 5000 points ! \n" +
+                "Plus vous avez des erreurs et plus vous perdez des points !!\nBonne chance ;)");
 
     }
 }
