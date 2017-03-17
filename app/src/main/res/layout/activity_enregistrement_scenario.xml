@@ -7,22 +7,26 @@
     tools:context="com.example.matteo.challengento_mkj.Multijoueur.EnregistrementScenario"
     android:background="@drawable/background_dance">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="584dp"
         android:layout_height="871dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="45dp"
-        tools:layout_editor_absoluteX="45dp">
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorAccent"
+            android:soundEffectsEnabled="false"
             android:text="TextView"
-            android:textColor="@android:color/holo_orange_dark"
-            android:textSize="50sp"
-            tools:layout_editor_absoluteX="100dp"
-            tools:layout_editor_absoluteY="100dp" />
-    </LinearLayout>
+            android:textColor="@android:color/black"
+            android:textSize="150sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="8dp" />
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
