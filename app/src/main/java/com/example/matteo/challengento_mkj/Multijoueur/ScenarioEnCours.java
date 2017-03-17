@@ -64,7 +64,7 @@ public class ScenarioEnCours extends AppCompatActivity implements SensorEventLis
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Donnees donnees = new Donnees(acceleromterVector, values[1], values[2]);
+                        Donnees donnees = new Donnees(acceleromterVector, (float)Math.toDegrees(values[1]), (float)Math.toDegrees(values[2]));
                         listDonnees.add(donnees);
 
                     }
@@ -72,7 +72,7 @@ public class ScenarioEnCours extends AppCompatActivity implements SensorEventLis
             }
         };
 
-        timerPrelevDonnees.schedule(timerTask, 0, Long.valueOf(200));
+        timerPrelevDonnees.schedule(timerTask, 0, Long.valueOf(20));
 
 
         timerJeu = new Timer();
@@ -118,28 +118,66 @@ public class ScenarioEnCours extends AppCompatActivity implements SensorEventLis
     }
 
     private int calculScore(){
-        int score = 0;
-        for (int i=0; i<listDonneesRecues.size(); i++){
-            Donnees etalon = listDonneesRecues.get(i);
-            Donnees aComparer = listDonnees.get(i);
+        int score = 5000;
+        for (int i=0; i<listDonneesRecues.size(); i+=10){
 
-            if (etalon != null && aComparer != null){
-                score += compareAccelerometer(etalon, aComparer);
-                score -= compareHorizontalite(aComparer);
+            List<Donnees> listEtalon = new ArrayList<>();
+            List<Donnees> listAComparer = new ArrayList<>();
+
+            for(int j=i; j<i+10 && j<listDonneesRecues.size(); j++){
+                listEtalon.add(listDonneesRecues.get(j));
+                listAComparer.add(listDonnees.get(j));
+                /*if(listAComparer!= null && listAComparer.get(j)!= null) {
+                    score -= compareHorizontalite(listAComparer.get(j));
+                }*/
+            }
+
+
+            if (!listEtalon.isEmpty() && !listAComparer.isEmpty()){
+                score -= compareAccelerometer(listEtalon, listAComparer);
+
             }
         }
+
+        for (int i=0; i<listDonnees.size(); i++){
+            score -= compareHorizontalite(listDonnees.get(i));
+        }
+
         return score;
     }
 
-    private int compareAccelerometer(Donnees etalon, Donnees aComparer){
-        int score = 0;
-        for (int i = 0; i<etalon.getAccelerometerVector().length; i++){
-            if (Math.abs(etalon.getAccelerometerVector()[i] - aComparer.getAccelerometerVector()[i]) < 5){
-                score +=5 ;
+    private int compareAccelerometer(List<Donnees> listEtalon, List<Donnees> listAComparer){
+        int sommeEtalonX = 0;
+        int sommeAComparerX = 0;
+        int sommeEtalonY = 0;
+        int sommeAComparerY = 0;
+        int sommeEtalonZ = 0;
+        int sommeAComparerZ = 0;
+        int resultat = 0;
+
+        for(int j=0; j<listEtalon.size(); j++){
+            for (int i = 0; i<listEtalon.get(j).getAccelerometerVector().length; i++){
+                switch(i){
+                    case 0 :
+                        sommeEtalonX += listEtalon.get(j).getAccelerometerVector()[i];
+                        sommeAComparerX += listAComparer.get(j).getAccelerometerVector()[i];
+                        break;
+                    case 1 :
+                        sommeEtalonY += listEtalon.get(j).getAccelerometerVector()[i];
+                        sommeAComparerY += listAComparer.get(j).getAccelerometerVector()[i];
+                        break;
+                    case 2:
+                        sommeEtalonZ += listEtalon.get(j).getAccelerometerVector()[i];
+                        sommeAComparerZ += listAComparer.get(j).getAccelerometerVector()[i];
+                        break;
+                }
             }
         }
+        resultat += Math.abs(sommeEtalonX-sommeAComparerX);
+        resultat += Math.abs(sommeEtalonY-sommeAComparerY);
+        resultat += Math.abs(sommeEtalonZ-sommeAComparerZ);
 
-        return score;
+        return resultat;
     }
 
     private int compareHorizontalite(Donnees d){
