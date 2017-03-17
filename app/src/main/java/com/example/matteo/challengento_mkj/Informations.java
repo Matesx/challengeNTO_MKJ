@@ -15,13 +15,7 @@ public class Informations extends AppCompatActivity {
 
         final TextView TextViewInfo = (TextView) findViewById(R.id.textViewInfo);
 
-        TextViewInfo.setText("Bienvenue sur l'application Chore App ! \n Reproduisez la même chorégraphie au mieux \n que vous pouvez ! :)");
-        /*
-        try {
-            getResources().getAssets().open("texte.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        */
+        TextViewInfo.setText("Bienvenue sur l'application Chore App ! \n L'application qui va vous faire bouger ! :)");
+
     }
 }

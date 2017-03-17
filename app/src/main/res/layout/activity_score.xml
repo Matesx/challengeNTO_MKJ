@@ -26,7 +26,7 @@
 
         <Button
             android:id="@+id/buttonReplay"
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="REJOUER"
             android:layout_below="@id/textViewScore"
@@ -37,7 +37,7 @@
 
         <Button
             android:id="@+id/buttonMenu"
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="MENU"
             android:layout_below="@id/buttonReplay"
