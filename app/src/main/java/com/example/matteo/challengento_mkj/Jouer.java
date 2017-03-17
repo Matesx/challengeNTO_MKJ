@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.matteo.challengento_mkj.Multijoueur.CreationScenario;
 
@@ -23,8 +24,7 @@ public class Jouer extends AppCompatActivity {
 
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent1 = new Intent(Jouer.this, Jouer.class);
-                startActivity(intent1);
+                Toast.makeText(getApplicationContext(), "Fonctionnalité en cours de développement ! rendez vous au mois de Mai ! ;)", Toast.LENGTH_SHORT).show();
 
             }
         });

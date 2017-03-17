@@ -41,8 +41,25 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        mediaPlayer.start();
 
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
+
+        mediaPlayer.setOnSeekCompleteListener(new MediaPlayer.OnSeekCompleteListener() {
+
+            @Override
+            public void onSeekComplete(MediaPlayer mediaPlayer) {
+                // TODO Auto-generated method stub
+                mediaPlayer.stop();
+                mediaPlayer.start();
+            }
+        });
+
+        mediaPlayer.start();
 
         buttonPlay.setText("JOUER");
         buttonInfo.setText("INFORMATIONS");
