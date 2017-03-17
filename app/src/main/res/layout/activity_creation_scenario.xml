@@ -17,6 +17,8 @@
             android:id="@+id/buttonCommencer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Button"
+            android:background="@android:color/holo_orange_light"
+            android:textStyle="bold"/>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

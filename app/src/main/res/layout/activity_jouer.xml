@@ -22,13 +22,25 @@
                 android:id="@+id/button1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1 joueur" />
+                android:text="1 joueur"
+                android:background="@android:color/holo_orange_light"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2 joueurs" />
+                android:text="2 joueurs"
+                android:background="@android:color/holo_orange_light"
+                android:textStyle="bold"
+                />
         </LinearLayout>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

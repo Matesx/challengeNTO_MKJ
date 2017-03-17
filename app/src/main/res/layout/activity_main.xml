@@ -26,14 +26,25 @@
                     android:id="@+id/buttonPlay"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@android:color/holo_orange_light"
+                    android:cursorVisible="false"
                     android:text="Jouer"
+                    android:textStyle="bold"
                     />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
                 <Button
                     android:id="@+id/buttonInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Informations" />
+                    android:background="@android:color/holo_orange_light"
+                    android:text="Informations"
+                    android:textStyle="bold"/>
             </LinearLayout>
 
         </GridLayout>
