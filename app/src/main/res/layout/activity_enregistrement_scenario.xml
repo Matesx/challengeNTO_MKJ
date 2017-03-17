@@ -4,11 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.matteo.challengento_mkj.Multijoueur.EnregistrementScenario">
+    tools:context="com.example.matteo.challengento_mkj.Multijoueur.EnregistrementScenario"
+    android:background="@drawable/background_dance">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+    <LinearLayout
+        android:layout_width="584dp"
+        android:layout_height="871dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="45dp"
+        tools:layout_editor_absoluteX="45dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="50sp"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="100dp" />
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.example.matteo.challengento_mkj;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         final Button buttonPlay = (Button) findViewById(R.id.buttonPlay);
         final Button buttonInfo = (Button) findViewById(R.id.buttonInfo);
+
 
         buttonPlay.setText("JOUER");
         buttonInfo.setText("INFORMATIONS");
