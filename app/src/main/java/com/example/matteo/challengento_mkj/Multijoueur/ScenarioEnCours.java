@@ -124,7 +124,7 @@ public class ScenarioEnCours extends AppCompatActivity implements SensorEventLis
             List<Donnees> listEtalon = new ArrayList<>();
             List<Donnees> listAComparer = new ArrayList<>();
 
-            for(int j=i; j<i+10 && j<listDonneesRecues.size(); j++){
+            for(int j=i; j<i+10 && j<listDonneesRecues.size() && j<listDonnees.size(); j++){
                 listEtalon.add(listDonneesRecues.get(j));
                 listAComparer.add(listDonnees.get(j));
                 /*if(listAComparer!= null && listAComparer.get(j)!= null) {
