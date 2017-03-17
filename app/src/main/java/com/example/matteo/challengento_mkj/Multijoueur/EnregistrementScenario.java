@@ -53,7 +53,7 @@ public class EnregistrementScenario extends AppCompatActivity implements SensorE
         listDonnees = new ArrayList<Donnees>();
 
         compteur=6;
-        textView.setText(""+compteur);
+        textView.setText(""+compteur + " secondes restantes");
 
         timerPrelevDonnees = new Timer();
         final TimerTask timerTask = new TimerTask() {
@@ -84,7 +84,7 @@ public class EnregistrementScenario extends AppCompatActivity implements SensorE
                 runOnUiThread(new Runnable(){
                     @Override
                     public void run(){
-                        textView.setText(""+ --compteur);
+                        textView.setText(""+--compteur + " secondes restantes");
 
                         if (compteur ==0) {
                             timerPrelevDonnees.cancel();

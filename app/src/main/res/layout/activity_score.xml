@@ -4,13 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.matteo.challengento_mkj.Multijoueur.Score">
+    tools:context="com.example.matteo.challengento_mkj.Multijoueur.Score"
+    android:background="@drawable/background_dance">
 
-    <TextView
-        android:id="@+id/textViewScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="112dp" />
+    <RelativeLayout
+        android:layout_width="584dp"
+        android:layout_height="871dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:id="@+id/textViewScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
+            android:text="Votre score : 345"
+            android:textColor="@android:color/background_light"
+            android:textSize="35sp"
+            tools:layout_editor_absoluteX="71dp"
+            tools:layout_editor_absoluteY="112dp" />
+
+        <Button
+            android:id="@+id/buttonReplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REJOUER"
+            android:layout_below="@id/textViewScore"
+            android:background="@android:color/holo_orange_light"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            />
+
+        <Button
+            android:id="@+id/buttonMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MENU"
+            android:layout_below="@id/buttonReplay"
+            android:background="@android:color/holo_orange_light"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            />
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
