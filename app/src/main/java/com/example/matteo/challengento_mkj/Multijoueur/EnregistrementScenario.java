@@ -89,6 +89,7 @@ public class EnregistrementScenario extends AppCompatActivity implements SensorE
                             Intent intent = new Intent(EnregistrementScenario.this, LancementScenario.class);
                             intent.putParcelableArrayListExtra("list", (ArrayList<Donnees>) listDonnees);
                             startActivity(intent);
+                            finish();
                         }
                     }
                 });
