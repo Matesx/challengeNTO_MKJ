@@ -2,6 +2,8 @@ package com.example.matteo.challengento_mkj;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.AssetFileDescriptor;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Environment;
@@ -27,9 +29,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         MediaPlayer mediaPlayer = new MediaPlayer();
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
+        AssetFileDescriptor file = getResources().openRawResourceFd(R.raw.chore_music);
 
+        try {
+            mediaPlayer.setDataSource(file.getFileDescriptor(), file.getStartOffset(), file.getLength());
+            file.close();
+            mediaPlayer.prepare();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
+        mediaPlayer.start();
 
 
         buttonPlay.setText("JOUER");
