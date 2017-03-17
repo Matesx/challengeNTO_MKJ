@@ -15,20 +15,36 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
 
             <Button
                 android:id="@+id/button1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1 joueur" />
+                android:text="1 joueur"
+                android:background="@android:color/holo_orange_light"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2 joueurs" />
+                android:text="2 joueurs"
+                android:background="@android:color/holo_orange_light"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                />
         </LinearLayout>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
