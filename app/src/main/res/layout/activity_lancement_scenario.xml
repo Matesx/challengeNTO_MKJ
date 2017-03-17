@@ -4,13 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.matteo.challengento_mkj.Multijoueur.LancementScenario">
+    tools:context="com.example.matteo.challengento_mkj.Multijoueur.LancementScenario"
+    android:background="@drawable/background_dance">
 
-    <Button
-        android:id="@+id/buttonLancerScenario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="153dp" />
+    <RelativeLayout
+        android:layout_width="584dp"
+        android:layout_height="871dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <Button
+            android:id="@+id/buttonLancerScenario"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_orange_light"
+            android:text="GO !!"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+             />
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
