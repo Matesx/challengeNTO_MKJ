@@ -143,6 +143,10 @@ public class ScenarioEnCours extends AppCompatActivity implements SensorEventLis
             score -= compareHorizontalite(listDonnees.get(i));
         }
 
+        for (int i=0; i<listDonneesRecues.size(); i++){
+            score += compareHorizontalite(listDonneesRecues.get(i));
+        }
+
         return score;
     }
 
