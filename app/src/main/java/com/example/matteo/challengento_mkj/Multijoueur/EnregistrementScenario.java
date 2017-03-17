@@ -62,15 +62,19 @@ public class EnregistrementScenario extends AppCompatActivity implements SensorE
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Donnees donnees = new Donnees(acceleromterVector, values[1], values[2]);
+                        Donnees donnees = new Donnees(acceleromterVector, (float)Math.toDegrees(values[1]), (float)Math.toDegrees(values[2]));
                         listDonnees.add(donnees);
 
+                        String s = "Accelerometer : " + Math.toDegrees(acceleromterVector[0])+", "+Math.toDegrees(acceleromterVector[1])+", "
+                                + Math.toDegrees(acceleromterVector[2])+"\n"+"Orientation : " +Math.toDegrees(values[1])+", "+
+                                Math.toDegrees(values[2]);
+                        //textView.setText(s);
                     }
                 });
             }
         };
 
-        timerPrelevDonnees.schedule(timerTask, 0, Long.valueOf(200));
+        timerPrelevDonnees.schedule(timerTask, 0, Long.valueOf(20));
 
 
         timerJeu = new Timer();
